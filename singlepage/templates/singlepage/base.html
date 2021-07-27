@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="{% static 'singlepage/css/style.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="{% static 'singlepage/js/script.js' %}"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'website/images/site.ico' %}"/>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital@1&family=New+Tegomin&family=Train+One&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {% block head %}
+    {% endblock %}
+
+    {% block title %}
+    {% endblock %}
+
+</head>
+<body>
+{% block body %}
+{% endblock %}
+    <header>
+        <nav>
+        </nav>
+    </header>
+    <article>
+        <main>
+            {% block main %}
+            {% endblock %}
+        </main>
+        <aside>
+        </aside>
+    </article>
+    <footer>
+        <br>
+        <p>Futebol VIP: Um site sobre o mundo do Futebol</p>
+    </footer>
+</body>
+</html>

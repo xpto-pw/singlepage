@@ -1,0 +1,47 @@
+{% extends 'singlepage/base.html' %}
+
+{% block head %}
+    <style>
+        div{
+            display: none;
+        }
+    </style>
+
+{% endblock %}
+
+{% block title %}
+    <title>Single Page</title>
+{% endblock %}
+
+{% block body %}
+
+    <h1>Futebol VIP: Base de Dados</h1>
+    <button data-section="1">Base Dados Jogador</button>
+    <button data-section="2">Ver Jogadores a Espera de Serem Inseridos</button>
+
+    <a href="{% url 'website:index' %}"><button data-section="4">Voltar ao FutebolVIP</button></a>
+
+
+
+{% endblock %}
+
+{% block main %}
+     <br>
+
+    <div id="content"></div>
+
+    <div id="content2">
+        <h4>Jogadores a espera de serem inseridos na Base de Dados Futebol VIP:</h4>
+         {% for jogador in jogadores %}
+             <p>{{ jogador.nome }} :: {{ jogador.apelido }} :: {{ jogador.clube }} :: {{ jogador.contacto }}</p>
+
+         {% endfor %}
+    </div>
+
+    <br>
+    <p>Altere você o visual da página :</p>
+    <a onclick="mudarFundo()"><button data-section="5">Cor de Fundo</button></a>
+    <a onclick="mudarCorLetra()"><button data-section="6">Cor de Letra</button></a>
+    <a onclick="mudarLetra()"><button data-section="7">Style de Letra</button></a>
+
+{% endblock %}

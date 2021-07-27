@@ -1,0 +1,23 @@
+{% extends 'website/base.html' %}
+
+{% block title %}
+    <title>Futebol VIP: Quizz</title>
+{% endblock %}
+
+{% block header %}
+    <h1>Futebol VIP: Quizz</h1>
+{% endblock %}
+
+{% block main %}
+    <section class="ask">
+        {% load static %}
+        <h3 class="blink"><img class="imagemMenu" src="{% static 'website/images/quizz.png' %}">Quizz</h3>
+        <p>Testando conhecimentos...</p>
+        <form action="" method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="Submit" class="btn btn-success" >
+        </form>
+    </section>
+    <br>
+{% endblock %}

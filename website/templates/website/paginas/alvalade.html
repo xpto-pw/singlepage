@@ -1,0 +1,39 @@
+{% extends 'website/paginas/base.html' %}
+
+{% block title %}
+    <title>Futebol VIP: Estádios</title>
+{% endblock %}
+
+{% block header %}
+    <h1>Futebol VIP: Estádios</h1>
+{% endblock %}
+
+{% block main %}
+        <article>
+              <section class="ask">
+                  <h3 class="blink">Estádio José Alvalade XXI</h3>
+              </section>
+              <section>
+                  <figure>
+                      {% load static %}
+                      <img class="displayed" src="{% static 'website/images/alvalade.jpg' %}">
+                      <figcaption><details>
+                          <summary>Estádio José Alvalade XXI</summary>
+                          <p><a href="https://24.sapo.pt/desporto/artigos/portugal-recebe-luxemburgo-no-estadio-jose-alvalade-para-o-euro2020" alt="alvalade" target="_blank">Imagem do Estádio José Alvalade XXI</a></p>
+                      </details></figcaption></a>
+                  </figure>
+              </section>
+            <section class="esconder">
+                <fieldset class="ask" >
+                    <p>O <a href="https://pt.wikipedia.org/wiki/Est%C3%A1dio_Jos%C3%A9_Alvalade" target="_blank">Estádio José Alvalade XXI</a> ou Estádio do Sporting Clube de Portugal, é um estádio de futebol localizado em Lisboa, Portugal, pertencente ao Sporting Clube de Portugal. Está enquadrado no complexo Alvalade XXI. Foi o primeiro estádio português a receber as 5 estrelas da UEFA.</p>
+                </fieldset>
+            </section>
+            <br>
+        </article>
+{% endblock %}
+
+{% block footer %}
+    <section>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/9Wc2_RHuOWQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </section>
+{% endblock footer %}

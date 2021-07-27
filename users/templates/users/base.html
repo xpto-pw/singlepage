@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% load static %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <header class="jumbotron text-center">
+        <h1>Futebol VIP</h1>
+        <nav>
+        </nav>
+    </header>
+    <article class="container">
+        <main class="col-sm-6">
+            {% block main %}
+	        {% endblock main %}
+        </main>
+        <aside class="col-sm-6">
+        </aside>
+    </article>
+    <footer class="jumbotron text-center">
+        <p>Futebol VIP: Um site sobre o mundo do Futebol</p>
+    </footer>
+</body>
+</html>

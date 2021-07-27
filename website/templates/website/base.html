@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% block title %}
+    {% endblock title %}
+
+    {% block head %}
+    {% endblock head %}
+
+    {% load static %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="icon" href="{% static 'website/images/favicon.ico' %}" type="image/x-icon">
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'website/images/site.ico' %}"/>
+    <link rel="stylesheet" href="{% static 'website/css/base.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital@1&family=New+Tegomin&family=Train+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {% block link %}
+    {% endblock %}
+
+</head>
+<body>
+{% block body %}
+{% endblock %}
+
+    <header >
+        {% load static %}
+        <section class="imagemTitle">
+            <img class="piscar" src="{% static 'website/images/vip.jpg' %}">
+        </section>
+        {% block header %}
+        {% endblock header %}
+
+        <nav class="menu">
+            {% load static %}
+            <ul>
+                <li ><a id="menu" href="{% url 'website:index' %}"><img class="imagemMenu" src="{% static 'website/images/home.ico' %}" >Homepage</a></li>
+
+                <li><a id="menu"><img class="imagemMenu" src="{% static 'website/images/football.ico' %}">Jogadores</a>
+                    <ul class="none">
+                        <li><a id="menu" href="paginas/figo.html"><img class="imagemMenu" src="{% static 'website/images//bola2.ico' %}" >Figo</a></li>
+                        <li><a id="menu" href="paginas/ronaldo.html"><img class="imagemMenu" src="{% static 'website/images//bola3.ico' %}" >C.Ronaldo</a></li>
+                        <li><a id="menu" href="paginas/zidane.html"><img class="imagemMenu" src="{% static 'website/images//bola4.ico' %}">Zidane</a></li>
+                        <li><a id="menu" href="paginas/ronaldinho.html"><img class="imagemMenu" src="{% static 'website/images//bola1.ico' %}">Ronaldinho</a></li>
+                    </ul>
+                <li><a id="menu"><img class="imagemMenu" src="{% static 'website/images//club.png' %}">Equipas</a>
+                <ul class="none">
+                    <li><a id="menu" href="paginas/united.html"><img class="imagemMenu" src="{% static 'website/images//united.png' %}">M.United</a></li>
+                    <li><a id="menu" href="paginas/sporting.html"><img class="imagemMenu" src="{% static 'website/images//scp.png' %}">Sporting</a></li>
+                    <li><a id="menu" href="paginas/madrid.html"><img class="imagemMenu" src="{% static 'website/images//madrid.png' %}">R.Madrid</a></li>
+                    <li><a id="menu" href="paginas/juventus.html"><img class="imagemMenu" src="{% static 'website/images//juventus.jpg' %}">Juventus</a></li>
+                </ul>
+                <li><a id="menu" ><img class="imagemMenu" src="{% static 'website/images/estadioo.ico' %}">Estádios</a>
+                <ul class="none">
+                    <li><a id="menu" href="paginas/bernabeu.html"><img class="imagemMenu" src="{% static 'website/images/estadio.ico' %}">Bernabéu</a></li>
+                    <li><a id="menu" href="paginas/alvalade.html"><img class="imagemMenu" src="{% static 'website/images/estadio.ico' %}">Alvalade</a></li>
+                    <li><a id="menu" href="paginas/trafford.html"><img class="imagemMenu" src="{% static 'website/images/estadio.ico' %}">Old Trafford</a></li>
+                </ul>
+                <li><a id="menu" href="{% url 'website:quizz' %}"><img class="imagemMenu" src="{% static 'website/images/quizz.ico' %}">Quizz</a></li>
+
+                <li><a id="menu" href="{% url 'website:sobre' %}"><img class="imagemMenu" src="{% static 'website/images/info.ico' %}">Sobre</a></li>
+
+                <li><a id="menu" href="{% url 'website:contactosNovo' %}"><img class="imagemMenu" src="{% static 'website/images/contact.png' %}">Adicionar Contacto</a></li>
+
+                <li><a id="menu" href="{% url 'website:jogadorNovo' %}"><img class="imagemMenu" src="{% static 'website/images/novoJ.png' %}">Novo Jogador</a></li>
+
+                <li><a id="menu" href="{% url 'website:multimedia' %}"><img class="imagemMenu" src="{% static 'website/images/multimedia.ico' %}">Multimedia</a></li>
+
+                <li><a id="menu" href="{% url 'singlepage:index' %}"><img class="imagemMenu" src="{% static 'website/images/java.png' %}">Singlepage</a></li>
+
+                <li><a id="menu" href="{% url 'website:comentarios' %}"><img class="imagemMenu" src="{% static 'website/images/coment.png' %}">Comentarios</a></li>
+            </ul>
+            {% block nav %}
+
+            {% endblock nav %}
+        </nav>
+    </header>
+    <article>
+        <main>
+            {% block main %}
+	        {% endblock main %}
+        </main>
+        <aside>
+        </aside>
+    </article>
+    <footer>
+        {% block footer %}
+        {% endblock footer %}
+        <a href="{% url 'users:login' %}" class="btn btn-info">LogIn</a>
+        <a href="{% url 'users:logout' %}" class="btn btn-info">LogOut</a>
+        <p class="ask" id="animacao">Futebol VIP: Um site sobre o mundo do Futebol</p>
+    </footer>
+</body>
+</html>

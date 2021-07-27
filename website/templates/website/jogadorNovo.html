@@ -1,0 +1,23 @@
+{% extends 'website/base.html' %}
+
+{% block title %}
+    <title>Futebol VIP: Adicionar Jogador</title>
+{% endblock %}
+
+{% block header %}
+    <h1>Futebol VIP: Adicionar Jogador</h1>
+{% endblock %}
+
+{% block main %}
+    <p>!Necessita registrar-se previamente em Novos Contactos!</p>
+    <section class="ask">
+    <h3 class="blink">Novo Jogador</h3>
+    <form method="POST" action="">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <a href="{% url 'website:index' %}" role="button" class="btn btn-warning">Cancelar</a>
+        <input type="submit" value="Gravar">
+    </form>
+    </section>
+    <br>
+{% endblock %}

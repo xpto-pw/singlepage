@@ -1,0 +1,40 @@
+{% extends 'website/paginas/base.html' %}
+
+{% block title %}
+    <title>Futebol VIP: Equipas</title>
+{% endblock %}
+
+{% block header %}
+    <h1>Futebol VIP: Equipas</h1>
+{% endblock %}
+
+{% block main %}
+   <article>
+       <section class="ask">
+           <h3 class="blink">Juventus Football Club</h3>
+       </section>
+       <section>
+           <figure>
+               {% load static %}
+               <img class="displayed" src="{% static 'website/images/juventus.jpg' %}">
+               <figcaption><details>
+                   <summary>Juventus Football Club</summary>
+                   <p><a href="https://www.futbolemotion.com/pt/categoria/produtos-oficiais/equipa/clubes/ligas-internacionais/juventus" alt="juventus" target="_blank">Imagem do emblema da Juventus Football Club</a></p>
+               </details></figcaption></a>
+           </figure>
+       </section>
+       <section class="esconder">
+           <fieldset class="ask" >
+               <p><a href="https://www.juventus.com/pt/" target="_blank">Juventus Football Club</a> (em latim: iuventude, pronunciado: juˈvɛntus), é um clube de futebol italiano, também conhecida como Juventus de Turim, Juve ou ainda A Velha Senhora (em Italiano La Vecchia Signora). A Juve é a maior detentora de scudettos do futebol Italiano com 36 títulos internos (sendo 9 seguidos) e é também o clube italiano com mais títulos oficiais se somados os títulos nacionais, internacionais e continentes (70 no total). É um dos clubes mais tradicionais e relevantes do mundo, tal qual conquistou todos os títulos do seu continente, feito alcançado por poucos clubes.</p>
+               <p><a href="https://pt.wikipedia.org/wiki/Juventus_Football_Club" target="_blank">Fonte</a></p>
+           </fieldset>
+       </section>
+       <br>
+   </article>
+{% endblock %}
+
+{% block footer %}
+    <section>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/U9yPVNfSZ3E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </section>
+{% endblock footer %}

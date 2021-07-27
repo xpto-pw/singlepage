@@ -1,0 +1,39 @@
+{% extends 'website/paginas/base.html' %}
+
+{% block title %}
+    <title>Futebol VIP: Jogadores</title>
+{% endblock %}
+
+{% block header %}
+    <h1>Futebol VIP: Jogadores</h1>
+{% endblock %}
+
+{% block main %}
+    <article>
+        <section class="ask">
+            <h3 class="blink">Cristiano Ronaldo</h3>
+        </section>
+        <section>
+            <figure>
+                {% load static %}
+                <img class="displayed" src="{% static 'website/images/ronaldo.jpg' %}">
+                <figcaption><details>
+                    <summary>Cristiano Ronaldo</summary>
+                    <p><a href="https://observador.pt/2020/02/05/cristiano-ronaldo-faz-35-anos-esta-connosco-ha-18-e-muda-de-vida-de-cinco-em-cinco/" alt="Ronaldo" target="_blank">Imagem de Cristiano Ronaldo em campo pela equipa da Juventus</a></p>
+                </details></figcaption></a>
+            </figure>
+        </section>
+        <section class="esconder">
+            <fieldset class="ask" >
+                <p><a href="https://pt.wikipedia.org/wiki/Cristiano_Ronaldo" target="_blank">Cristiano Ronaldo dos Santos Aveiro</a> (Funchal, 5 de fevereiro de 1985) é um futebolista português que atua como extremo-esquerdo ou ponta de lança. Atualmente joga pela Juventus e pela Seleção Portuguesa. Frequentemente considerado como um dos melhores e mais completos jogadores do mundo e de todos os tempos, foi eleito o melhor jogador do mundo pela FIFA e pela France Football recebendo o prêmio Ballon d'Or (que por um período passou a denominar-se Bola de Ouro da FIFA) um total de cinco vezes: 2008, 2013, 2014, 2016 e 2017. Também venceu o prêmio Bota de Ouro da UEFA em um total de quatro vezes. Ganhou três vezes o prêmio de Melhor Jogador da UEFA na Europa e uma vez o prêmio de Melhor Jogador de Clubes da UEFA.</p>
+            </fieldset>
+        </section>
+        <br>
+    </article>
+{% endblock %}
+
+{% block footer %}
+    <section>
+       <iframe width="560" height="315" src="https://www.youtube.com/embed/OUKGsb8CpF8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </section>
+{% endblock footer %}

@@ -1,0 +1,31 @@
+
+:root {
+    --fundo : blue;
+    --letraC : yellow;
+    --letraF : normal;
+}
+
+
+* {
+      font-family: 'Lobster', cursive;
+}
+
+  h2{
+      text-align: center;
+      font-family: 'New Tegomin', serif;
+      font-size: 40px;
+      font-weight: bold;
+  }
+  h1{
+      text-align: center;
+      font-family: 'Train One', cursive;
+  }
+
+body {
+     text-align: center;
+     background: var(--fundo);
+     color: var(--letraC);
+     font-style: var(--letraF);
+}
+
+

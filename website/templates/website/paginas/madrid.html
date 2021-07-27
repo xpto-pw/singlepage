@@ -1,0 +1,40 @@
+{% extends 'website/paginas/base.html' %}
+
+{% block title %}
+    <title>Futebol VIP: Equipas</title>
+{% endblock %}
+
+{% block header %}
+    <h1>Futebol VIP: Equipas</h1>
+{% endblock %}
+
+{% block main %}
+     <article>
+     <section class="ask">
+         <h3 class="blink">Real Madrid Club de Fútbol</h3>
+     </section>
+         <section>
+             <figure>
+                 {% load static %}
+                 <img class="displayed" src="{% static 'website/images/madrid.png' %}">
+                 <figcaption><details>
+                     <summary>Real Madrid Club de Fútbol</summary>
+                     <p><a href="https://www.realmadrid.com/pt/noticias/2021/04/07/a-equipa-prepara-o-classico-depois-da-vitoria-na-champions" alt="madrid" target="_blank">Imagem do emblema do Real Madrid Club de Fútbol</a></p>
+                 </details></figcaption></a>
+             </figure>
+         </section>
+         <section class="esconder">
+             <fieldset class="ask" >
+                 <p>O <a href="https://www.realmadrid.com/pt" target="_blank">Real Madrid Club de Fútbol</a>, mais conhecido como Real Madrid ou simplesmente Real, é um clube polidesportivo espanhol, com sede em Madrid. Foi fundado oficialmente no dia 6 de março de 1902 pelos irmãos Juan Padrós e Carlos Padrós, com o nome de (Sociedad) Madrid Foot-Ball Club. Iniciado como um clube de futebol, logo adquiriu um caráter polidesportivo que o levou a desenvolver vários departamentos esportivos dentro da entidade, embora a maioria destes departamentos estejam desativados atualmente. Participa da Primeira Divisão da Espanha, a mais alta categoria do Campeonato Espanhol de Futebol, desde a sua fundação, em 1929, sendo um dos três únicos clubes que nunca foram rebaixados, assim como o Athletic Club e o Barcelona.</p>
+                 <p><a href="https://pt.wikipedia.org/wiki/Real_Madrid_Club_de_F%C3%BAtbol" target="_blank">Fonte</a></p>
+             </fieldset>
+         </section>
+         <br>
+     </article>
+{% endblock %}
+
+{% block footer %}
+    <section>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/0yW8Ae8DKCw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </section>
+{% endblock footer %}

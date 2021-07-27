@@ -1,0 +1,40 @@
+{% extends 'website/paginas/base.html' %}
+
+{% block title %}
+    <title>Futebol VIP: Equipas</title>
+{% endblock %}
+
+{% block header %}
+    <h1>Futebol VIP: Equipas</h1>
+{% endblock %}
+
+{% block main %}
+   <article>
+       <section class="ask">
+           <h3 class="blink">Sporting Clube de Portugal</h3>
+       </section>
+       <section>
+           <figure>
+               {% load static %}
+               <img class="displayed" src="{% static 'website/images/scp.png' %}">
+               <figcaption><details>
+                   <summary>Sporting Clube de Portugal</summary>
+                   <p><a href="https://desporto.sapo.pt/futebol/primeira-liga/artigos/sporting-esclarece-lesao-de-nuno-mendes" alt="sporting" target="_blank">Imagem do emblema do Sporting Clube de Portugal</a></p>
+               </details></figcaption></a>
+           </figure>
+       </section>
+       <section class="esconder">
+           <fieldset class="ask" >
+               <p>O <a href="https://www.sporting.pt/pt" target="_blank">Sporting Clube de Portugal</a> é um clube português, eclético e multidesportivo, fundado a 1 de julho de 1906, com sede em Lisboa no Complexo Alvalade XXI. É um dos "Três Grandes" clubes em Portugal, juntamente com SL Benfica e FC Porto. Conta com mais de 175 000 sócios registados e mais de três milhões e 500 mil adeptos apenas no território nacional e muitos sportinguistas espalhados pela Europa e pelo Mundo. É o terceiro clube com mais adeptos em Portugal. As suas equipas, atletas e simpatizantes, são apelidados de sportinguistas e leões.</p>
+               <p><a href="https://pt.wikipedia.org/wiki/Sporting_Clube_de_Portugal" target="_blank">Fonte</a></p>
+           </fieldset>
+       </section>
+       <br>
+   </article>
+{% endblock %}
+
+{% block footer %}
+    <section>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/rsF92FJLCCE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </section>
+{% endblock footer %}

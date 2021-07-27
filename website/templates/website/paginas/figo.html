@@ -1,0 +1,40 @@
+{% extends 'website/paginas/base.html' %}
+
+{% block title %}
+    <title>Futebol VIP: Jogadores</title>
+{% endblock %}
+
+{% block header %}
+    <h1>Futebol VIP: Jogadores</h1>
+{% endblock %}
+
+{% block main %}
+    <article>
+        <section class="ask">
+            <h3 class="blink">Luís Figo</h3>
+        </section>
+        <section>
+            <figure>
+                {% load static %}
+                <img class="displayed" src="{% static 'website/images/figo.jpg' %}">
+                <figcaption><details>
+                    <summary>Luís Figo</summary>
+                    <p><a href="https://calciopedia.com.br/2016/03/jogadores-luis-figo.html" alt="Figo" target="_blank">Imagem de Figo em campo pela seleção Portuguesa</a></p>
+                </details></figcaption></a>
+            </figure>
+        </section>
+        <section class="esconder">
+            <fieldset class="ask">
+                <p><a href="https://pt.wikipedia.org/wiki/Lu%C3%ADs_Figo" target="_blank">Luís Filipe Madeira Caeiro Figo</a> (Lisboa, 4 de novembro de 1972) é um ex-futebolista português que atuava como médio ou extremo.</p>
+                <p>Figo venceu o Ballon d'Or em 2000, foi o Melhor Jogador do Mundo pela FIFA em 2001 e está incluído no FIFA 100.</p>
+            </fieldset>
+        </section>
+        <br>
+    </article>
+{% endblock %}
+
+{% block footer %}
+    <section>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/6TVG3peOLvk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </section>
+{% endblock footer %}

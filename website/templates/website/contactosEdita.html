@@ -1,0 +1,21 @@
+{% extends 'website/base.html' %}
+
+{% block title %}
+    <title>Futebol VIP: Contactos</title>
+{% endblock %}
+
+{% block header %}
+    <h1>Futebol VIP: Editar Contactos(Admin)</h1>
+{% endblock %}
+
+{% block main %}
+    <h3>Editar/Apagar Contacto</h3>
+    <form method="POST" action="{% url 'website:contactosEdita' contacto_id %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <a href="{% url 'website:contactos' %}" role="button" class="btn btn-danger">Cancelar</a>
+        <input type="submit" value="Gravar">
+        <a href="{% url 'website:contactosApaga' contacto_id %}" role="button" class="btn btn-danger">Apagar</a>
+
+    </form>
+{% endblock %}

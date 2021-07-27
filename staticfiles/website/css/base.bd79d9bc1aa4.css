@@ -1,0 +1,444 @@
+
+*{
+  font-family: 'Lobster', cursive;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+img{
+max-width: 100%;
+}
+.imagemMenu{
+  width: 35px;
+  height: 35px;
+}
+
+.imagemMenu2{
+  width: 200px;
+  height: 200px;
+}
+
+.imagemMenu22{
+  width: 70px;
+  height: 70px;
+}
+
+.imagemMulti{
+   width: 500px;
+   height: 350px;
+}
+
+.imagemTitle{
+   width: 60px;
+   height: 60px;
+}
+
+iframe{
+max-width: 100%;
+}
+
+svg{
+width: 100%;
+height:100%;
+display: block;
+}
+
+IMG.displayed {
+display: block;
+margin-left: auto;
+margin-right: auto
+}
+
+.header{
+display: flex;
+justify-content: center;
+}
+
+.main{
+margin-top:20px;
+display: flex;
+justify-content: center;
+}
+
+.form-block {
+    display: block;
+}
+
+body {
+    background-image: url("../images/fundo.5229c18bd1a7.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+/* body, html {
+  height: 100%;
+}
+svg not showing using percenteged*/
+
+.footer{
+margin-top:10px;
+display: flex;
+justify-content: center;
+}
+
+.nav{
+margin-top:10px;
+display: flex;
+justify-content: center;
+}
+
+.aside{
+display: flex;
+margin-left:100px;
+}
+
+.box {
+display: flex;
+flex-wrap: wrap;
+flex-direction: row;
+width: 200px;
+height: 100px;
+align-content: space-between;
+}
+
+.container {
+max-width: 100vh;
+max-height: 100%;
+margin: 0 auto;
+overflow: hidden;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+nav#foto ul li{
+display:inline-block;
+margin-left:0px;
+margin-top:10px;
+text-align: center;
+}
+
+nav#foto li:hover {
+transform: scale(0.8, 0.8);
+  margin-left:0px;
+}
+
+main#foto ul li{
+display:inline-block;
+margin-left:0px;
+margin-top:10px;
+text-align: center;
+}
+
+main#foto li:hover {
+transform: scale(1.2, 1.2);
+}
+
+.menu{
+display: flex;
+flex-direction: column;
+position: static;
+}
+
+.menu li{
+  position:relative;
+  cssFloat:inline-start;
+  background-color: rgba(0, 1, 5, 0.71);
+}
+
+.menu li  ul{
+  position:absolute;
+  top:0;
+  left: 300px;
+  display:none;
+  }
+
+  .menu li:hover ul{
+    position:relative;
+    transform: scale(1.3, 1.3);
+    display:block;
+  }
+
+ul.none {
+list-style-type: none;
+}
+
+.menu2{
+display: flex;
+flex-direction: column;
+position: static;
+}
+
+.menu2 li{
+position:relative;
+cssFloat:inline-start;
+}
+
+.menu2 li  ul{
+  position:absolute;
+  top:0px;
+  left:0px;
+  display:none;
+  }
+
+  .menu2 li:hover ul{
+    display:block;
+    position:relative;
+  }
+
+
+.header{grid-area: header;}
+.nav{grid-area: nav;}
+.aside{grid-area: aside;}
+.main{grid-area: main;}
+.footer{grid-area: footer;}
+
+.grid-container {
+display: grid;
+grid-template-areas:
+  'header header header header header aside'
+  'nav main main main main aside'
+  'nav footer footer footer footer aside';
+padding: 5px;
+}
+
+.grid-container2 {
+display:grid;
+grid-template-areas:
+  'header aside'
+  'main aside'
+  'nav aside';
+padding: 30px;
+}
+
+@media only screen and (max-width: 600px) {
+.esconder {
+  display: none;
+}
+
+.menu li  ul{
+  position:absolute;
+  top:-10px;
+  left: 100px;
+  display:none;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .menu li  ul{
+  top:-10px;
+  }
+  }
+
+  @media only screen and (max-width: 900px) {
+    .esconder2{
+      display: none;
+    }
+
+    nav#foto ul li{
+      display:table-row;
+      margin-left:0px;
+      margin-top:10px;
+      text-align: center;
+      }
+
+      nav#foto li:hover {
+      transform: scale(1.1, 1.1);
+      }
+
+      main#foto ul li{
+      display:table-row;
+      margin-left:0px;
+      margin-top:10px;
+      text-align: center;
+      }
+
+      main#foto li:hover {
+      transform: scale(1.2, 1.2);
+      }
+    }
+
+.animacao2 {
+  width: 200px;
+  height: 200px;
+  animation: deslocar2 2s infinite alternate;
+}
+
+@keyframes deslocar2 {
+  from {
+    transform: translateY(100px);
+  }
+  to {
+    transform: translateY(250px);
+  }
+}
+
+.animacao3{
+  width: 50px;
+  height: 50px;
+  position: relative;
+  animation: bola 2s infinite alternate;
+}
+
+@keyframes bola {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(250px);
+}
+}
+
+.animacao {
+  width: 200px;
+  height: 200px;
+  animation: deslocar 2s infinite alternate;
+}
+
+@keyframes deslocar {
+  from {
+    transform: translateX(10px);
+  }
+  to {
+    transform: translateX(250px);
+  }
+}
+
+p#animacao {
+  animation-duration: 3s;
+animation-name: deslizar;
+}
+
+@keyframes deslizar {
+  from {
+    margin-left: 50%;
+    width: 50%
+  }
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+p#animacao2 {
+animation-duration: 7s;
+animation-name: vip;
+animation-iteration-count: infinite;
+}
+
+@keyframes vip {
+  from {
+    margin-left: 50%;
+    width: 100%;
+  }
+  to {
+    margin-left: 0%;
+    width: 100%;
+    font-size: 150%;
+  }
+}
+
+@keyframes blink {
+  0% { color: red; }
+  100% { color: rgb(0, 255, 13); }
+}
+@-webkit-keyframes blink {
+  0% { color: red; }
+  100% { color: rgb(0, 255, 13); }
+}
+.blink {
+  animation: blink 1s linear infinite;
+}
+
+.piscar {
+  animation: blink-animation 1s steps(5, start) infinite;
+}
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+
+  h3{
+    text-align: center;
+      font-family: 'New Tegomin', serif;
+      color: rgb(0, 255, 13);
+      font-size: 40px;
+      font-weight: bold;
+  }
+  h1{
+    text-align: center;
+      font-family: 'Train One', cursive;
+      color: rgb(0, 255, 13)
+  }
+  h5{
+    text-align: center;
+      font-family: 'Josefin Sans', sans-serif;
+      color: rgb(0, 255, 13)
+  }
+  .title{
+      font-size: 22px;
+  }
+  .text{
+      font-size: 11px;
+}
+
+
+.hdr{
+  background:white ;
+}
+
+.table{
+  background: rgba(11, 12, 11, 0.68);
+  color: #002dff;
+}
+.area{
+  background: white;
+}
+.ask{
+  background: rgba(0, 1, 5, 0.71);
+  color: rgb(0, 255, 13);
+}
+
+.ask2{
+  background: rgba(0, 1, 5, 0.71);
+  color: white;
+}
+
+.importante{
+  font-weight: bold ;
+  }
+
+p::first-letter {
+      color: blue;
+      font-size: x-large;
+    }
+
+a#menu{
+  color: rgb(0, 255, 13);
+}
+
+a:hover{
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+a:visited{
+  color: rgb(255, 0, 38);
+}
+
+a:link{
+ color:rgb(238, 255, 0);
+}
+
+

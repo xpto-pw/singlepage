@@ -1,0 +1,40 @@
+{% extends 'website/paginas/base.html' %}
+
+{% block title %}
+    <title>Futebol VIP: Equipas</title>
+{% endblock %}
+
+{% block header %}
+    <h1>Futebol VIP: Equipas</h1>
+{% endblock %}
+
+{% block main %}
+   <article>
+       <section class="ask">
+           <h3 class="blink">Manchester United Football Club</h3>
+       </section>
+       <section>
+           <figure>
+               {% load static %}
+               <img class="displayed" src="{% static 'website/images/united.png' %}">
+               <figcaption><details>
+                   <summary>Manchester United Football Club</summary>
+                   <p><a href="https://pt.wikipedia.org/wiki/Manchester_United_Football_Club" alt="united" target="_blank">Imagem do emblema do Manchester United Football Club</a></p>
+               </details></figcaption></a>
+           </figure>
+       </section>
+       <section class="esconder">
+           <fieldset class="ask" >
+               <p>O <a href="https://www.manutd.com/" target="_blank">Manchester United Football Club</a> é um clube inglês, sediado em Trafford, na região metropolitana de Manchester, sendo um dos times mais populares e mais bem sucedidos da Inglaterra e do mundo. Manchester United é o clube de maior sucesso na Inglaterra, tendo ganho 38 títulos importantes desde que Sir Alex Ferguson tornou-se treinador em 6 de novembro de 1986. Em 1968, se tornou o primeiro clube inglês a vencer a Copa dos Campeões, atual Liga dos Campeões, batendo o Benfica por 4–1, ganhando a segunda Liga dos Campeões em 1999, e a terceira em 2008. O United ultrapassou o seu rival Liverpool em conquistas no ano de 2011, ao atingir a marca de 19 títulos do Campeonato Inglês.</p>
+               <p><a href="https://pt.wikipedia.org/wiki/Manchester_United_Football_Club" target="_blank">Fonte</a></p>
+           </fieldset>
+       </section>
+       <br>
+   </article>
+{% endblock %}
+
+{% block footer %}
+    <section>
+     <iframe width="560" height="315" src="https://www.youtube.com/embed/GynTajMqerA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </section>
+{% endblock footer %}

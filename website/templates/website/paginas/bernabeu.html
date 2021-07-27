@@ -1,0 +1,41 @@
+{% extends 'website/paginas/base.html' %}
+
+{% block title %}
+    <title>Futebol VIP: Estádios</title>
+{% endblock %}
+
+{% block header %}
+    <h1>Futebol VIP: Estádios</h1>
+{% endblock %}
+
+{% block main %}
+        <article>
+            <section class="ask">
+                <h3 class="blink">Estádio Santiago Bernabéu</h3>
+            </section>
+            <section>
+                <figure>
+                    {% load static %}
+                    <img class="displayed" src="{% static 'website/images/bernabeu.jpg' %}">
+                    <figcaption><details>
+                        <summary>Estádio Santiago Bernabéu</summary>
+                        <p><a href="https://www.spain.info/pt_BR/lugares-interesse/estadio-santiago-bernabeu/" alt="bernabeu" target="_blank">Imagem do Estádio Santiago Bernabéu</a></p>
+                    </details></figcaption></a>
+                </figure>
+            </section>
+
+              <section class="esconder">
+                  <fieldset class="ask" >
+                      <p>O <a href="https://pt.wikipedia.org/wiki/Est%C3%A1dio_Santiago_Bernab%C3%A9u" target="_blank">Estádio Santiago Bernabéu</a> é um estádio de futebol localizado em Madrid, na Espanha, de propriedade do Real Madrid.<p>
+                      <p>Localizado no lugar do antigo estádio do Real Madrid, o Estádio Charmatín, o Santiago Bernabéu foi projetado por Luis Alemany Soler e Manuel Muñoz Monasterio.<p>
+                  </fieldset>
+              </section>
+            <br>
+        </article>
+{% endblock %}
+
+{% block footer %}
+    <section>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/muGyJEu12A8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </section>
+{% endblock footer %}

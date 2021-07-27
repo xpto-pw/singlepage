@@ -1,0 +1,384 @@
+{% extends 'website/base.html' %}
+{% load static %}
+
+{% block title %}
+    <title>Futebol VIP: Sobre</title>
+{% endblock %}
+
+{% block header %}
+    <h1>Futebol VIP: Sobre Nós</h1>
+{% endblock %}
+
+
+{% block main %}
+    <h3 class="blink">Sobre</h3>
+    <section class="ask2">
+        <h5>Tecnicas usadas:</h5>
+        <p id="unico">
+            Parte 1:
+            Na criação deste website, sobre futebol, utilizei CSS para estilização de todas as páginas, header, nav, main, aside, footer, imagens, texto, títulos, animações e responsividade do site e dos mesmo.
+            Utilizei CSS Grid para estilizar/formatar a estrutura dos 2 layouts que criei/utilizei, e Flex no display de alguns conteúdos.
+            Foram também utilizados diversos ícons, animações, fonts de letras, uma imagem Wordlcloud, algumas imagens e vídeos para tornar o site mais dinâmico.
+            O formulário criado, na forma de um quizz, sobre o mais diverso conteúdo do site envia as respostas dos utilizadores para um e-mail.
+            Além, das técinas e propriedas já enunciadas, utilizei várias técnincas do HTML e CSS asseguir enunciadas/tabeladas.
+        </p>
+        <p>
+            Parte 2:
+            Utilizando a base feita na parte 1 do projecto, re-criei o mesmo site, mas desta feita, em Django. Para isso utilizei as várias compenentes deste mesmo sistem.
+            URLS.py para gravar os caminhos(PATH) a serem prosseguidos pelo website. URLS na pasta config. contendo o caminho a ser feito pelo browser para ir ao encontro de outro URLS.py, mas desta feita, com o caminho específico de cada app contida no projecto.
+            No URLS.py(na pasta da app correspondente), contem agora o caminho específico para um hmtl ou outro da app pedida, identificando a "função" dentro da página VIEWS.py pela qual este recurso pedido deverá ser renderizado antes de ser enviado como resposta.
+            No VIEWS.py(da app corresponde), recebe um request do utilizador, ou browser, e através da "função", previamente identificada pelo URLS.py, que tem contida faz algumas operações necessários como editar a base de dados e retorna a renderização dessa página de acordo com o template indicado.
+            Na pasta template(de cada app), tenho inserido uma base.html que serve como "molde" para todos os outros ficheiros template.html de forma a apresentarem a mesma "raiz".
+            Estes(templas.html) renderização a página.
+            Em MODELS.py defeni os modelos(classes) para as base de dados que seram necessárias para o website, bem como e tipo e variávis. Aqui utlizei Primary Key, em Contacto, Foreign Key, em Jogadores e Comentários, de forma a ter 3 classes interligadas dependes da class Contacto, ou seja, apagando um objecto da class contacto seram apagados todos os objectos a si associados(on_delete=models.CASCADE).
+            Em ADMIN.py estão registrados estes models.
+            Em FORMS.py programei vários formulários para inserir dados em base de dados do website, devidamente acedidos por um admin.
+            Foi feita também uma página contactos, apenas acessível a um utilizador autenticado, que permite fazer operações CRUD sobre estes dados (listar, editar e apagar contactos).
+        </p>
+        <p>
+            Parte 3:
+            Fiz uma SinglePage, com utlização de JavaScript(ficheiro js), que funciona como uma base de dados dos jogadores.
+            Para isso implementei os seguintes butões:
+            *Butão 1-lista os jogadores registrados e obtidos pela API inserida em VIEWS.py.
+            -Este butão retornm "páginas" formadas pelo js. Ou seja ao carregar nestes butões(onclick()) os mesmos através de Handlers fazem operações DOM ao registo da API previamente gravada de forma a retornar os dados necessários ao pedido desse butão.
+            Após receber estes dados uma funçao do js cria um array de HTML em que cada posição irá registrar uma página(html) com a informção contida na API. Esta operação e recursiva até que todas as posições na API terem uma página(html) criada e introduzida no array de HTML.
+            Renderizadas por uma funçãoTemplate() gravada no js.
+            Este array HTML é retornado depois como uma página com todos os jogadores listados na API para um div(com context id == à seção section pedida) que esta previamente escondido(hidden) como todos os outros, até ser necessário.
+            Por fim cada jogador listado, nesta página, tem um butão que faz basicamente o mesmo anteriormente descrito através de outra funçãoTemplate() com toda a info da posição do API específico que pretendemos.
+            *Butão 3-lista os jogadores a espera de serem inseridos pela API no registo, que foram inseridos pelos utilizadores do site. Correndo todos os Objectos do tipo Jogador grvados na base de dados.
+            *Butão 4-retorna a página para a Homepage do website.
+            *Butão 5, 6, 7-faz manipulações do DOM com JavaScript de forma a mudar a cor de fundo do site(5), cor das letras(6) e style das letras(7).
+        </p>
+    </section>
+
+                <section class="ask2">
+                    <h5>Tecnologias usadas:</h5>
+                    <h5>Ferramentas: PyCharm, Windows PowerShell, GitHub e Heroku.</h5>
+                    <h5>HTML 5</h5>
+                    <p id="unico">HTML5 (Hypertext Markup Language, versão 5) é uma linguagem de marcação para a World Wide Web e é uma tecnologia chave da Internet, originalmente proposto por Opera Software.</p>
+                <section>
+                    <table class="table" border="1" cellpadding="20%" cellspacing="10px" bgcolor="#232900">
+                     <thead>
+                        <tr>
+                        <th class="hdr">Elementos HTML5</th>
+                        <th class="hdr">Utilização</th>
+                        <th class="hdr">Descrição</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                            <tr>
+                                <td class="body">header</td>
+                                <td class="body"><span class="material-icons">add_task</span></td>
+                                <td class="body">Utilizei em todas as páginas.</td>
+                            </tr>
+                            <tr>
+                                <td class="body">nav</td>
+                                <td class="body" ><span class="material-icons">add_task</span></td>
+                                <td class="body" >Utilizei em todas as páginas.</td>
+                            </tr>
+                            <tr>
+                                <td class="body">main</td>
+                                <td class="body"><span class="material-icons">add_task</span></td>
+                                <td class="body" >Utilizei em todas as páginas.</td>
+                            </tr>
+                            <tr>
+                                <td class="body">article</td>
+                                <td class="body" ><span class="material-icons">add_task</span></td>
+                                <td class="body">Utilizei em todas as páginas.</td>
+                            </tr>
+                            <tr>
+                                <td class="body">section</td>
+                                <td class="body"><span class="material-icons">add_task</span></td>
+                                <td class="body">Utilizei em todas as páginas.</td>
+                            </tr>
+                            <tr>
+                                <td class="body" >aside</td>
+                                <td class="body" ><span class="material-icons">add_task</span></td>
+                                <td class="body">Utilizei na maioria das páginas.</td>
+                            </tr>
+                            <tr>
+                                <td class="body">footer</td>
+                                <td class="body"><span class="material-icons">add_task</span></td>
+                                <td class="body">Utilizei na maioria das páginas.</td>
+                            </tr>
+                            <tr>
+                                <td class="body">details</td>
+                                <td class="body"><span class="material-icons">add_task</span></td>
+                                <td class="body">Utilizei como descrição nas fotos.</td>
+                            </tr>
+                            <tr>
+                                <td class="body">title</td>
+                                <td class="body"><span class="material-icons">add_task</span></td>
+                                <td class="body">Utilizei em todas as páginas.</td>
+                            </tr>
+                            <tr>
+                                <td class="body">meta</td>
+                                <td class="body" ><span class="material-icons">add_task</span></td>
+                                <td class="body" >Utilizei como descrição em todas as páginas.</td>
+                            </tr>
+                            <tr>
+                                <td class="body">body</td>
+                                <td class="body"><span class="material-icons">add_task</span></td>
+                                <td class="body" >Utilizei em todas as páginas.</td>
+                            </tr>
+                        </tr>
+                      </tbody>
+                    </table>
+                    </section>
+                </section>
+
+                <section class="ask2">
+                      <h5>Tabela de inventário</h5>
+                      <table class="table" border="1" cellpadding="20%" cellspacing="10px" bgcolor="#232900">
+
+                       <thead>
+                          <tr>
+                          <th class="hdr">Descrição</th>
+                          <th class="hdr">Numero de Utilizações</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                              <tr>
+                                  <td class="body" >Número de páginas</td>
+                                  <td class="body">29</td>
+                              </tr>
+                              <tr>
+                                  <td class="body">Número de imagens</td>
+                                  <td class="body">16 descritivas das páginas, 6 como opção nos menus, 1 como animação, 1 como fundo(background) e 1 svg(Wordlcloud).25</td>
+                              </tr>
+                              <tr>
+                                  <td class="body" >Número de vídeos</td>
+                                  <td class="body">12</td>
+                              </tr>
+                              <tr>
+                                  <td class="body" >Número de Animações</td>
+                                  <td class="body">4 diferentes</td>
+                              </tr>
+                              <tr>
+                                  <td class="body">Número de links externos</td>
+                                  <td class="body">15 nos textos, 17 na descrição das fontes das imagens, 11 na Wordlcloud.43</td>
+                              </tr>
+                          </tr>
+                        </tbody>
+                      </table>
+                  </section>
+
+              <section class="ask2">
+                <h5>Técnicas usadas</h5>
+                <table class="table" border="1" cellpadding="20%" cellspacing="10px" bgcolor="#232900">
+                 <thead>
+                    <tr>
+                    <th class="hdr">Carateristicas</th>
+                    <th class="hdr">Elementos/técnicas</th>
+                    <th class="hdr">Exemplos</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                        <tr>
+                            <td class="body">Layouts</td>
+                            <td class="body">Usou-se o CSS grid e CSS flexbox para construção de layouts</td>
+                            <td class="body">Criei 2 layouts, um para um Menu mais dinâmico e responsivo na página intro.html e outro nas outras páginas.</td>
+                        </tr>
+                        <tr>
+                            <td class="body">Responsividade</td>
+                            <td class="body">Foram usadas media queries que adaptam o layout para PC consoante o tamanho da janela do browser.</td>
+                            <td class="body">Todas as páginas são responsivas adaptando o tamanho do contéudo ao tamanho da janela, mais específico: letras do texto ficam verdes apartir de max-width: 800px e o texto desaparece apartir de max-width: 600px.</td>
+                        </tr>
+                        <tr>
+                            <td class="body">Seletores</td>
+                            <td class="body">Foram usados vários selectores, descritos na tabela css: selectores css </td>
+                            <td class="body">Utilizei em todas as páginas para definir a font o selector universal.</td>
+                        </tr>
+                        <tr>
+                            <td class="body">Etiquetas</td>
+                            <td class="body" >HTML5 main, header, article, footer, figure...</td>
+                            <td class="body">Em todas as páginas foram usadas e formatados de acordo com a disposição do grid, numa página de uma equipa o menu está em nav, a imagem e texto no main, título no header e video no footer.</td>
+                        </tr>
+                        <tr>
+                            <td class="body">Animações</td>
+                            <td class="body">Foram feitas animações usando keyframes que permitem deslocar imagens/icons.</td>
+                            <td class="body">Ampliação das opções no 1º zoom, deslocação das bolas de futebol e do "logo" e de 1 linha de texto no index.</td>
+                        </tr>
+                    </tr>
+                  </tbody>
+                </table>
+                </section>
+
+                  <section class="ask2">
+                    <h5>CSS</h5>
+                    <p id="unico">Cascading Style Sheets (Folhas de Estilo em Cascata), assim como a HTML, não é uma linguagem de programação. CSS é uma linguagem de folha de estilos usada amplamente na web e criada com o propósito principal de estilizar páginas HTML</p>
+                    <table class="table" border="1" cellpadding="20%" cellspacing="10px" bgcolor="#232900">
+
+                     <thead>
+                        <tr>
+                        <th class="hdr">Seletores CSS</th>
+                        <th class="hdr" >Utilização</th>
+                        <th class="hdr" >Descrição</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                            <tr>
+                                <td class="body" >universal</td>
+                                <td class="body"><span class="material-icons">add_task</span></td>
+                                <td class="body">Utilizei em todas as páginas para definir a font.</td>
+                            </tr>
+                            <tr>
+                                <td class="body">tipo</td>
+                                <td class="body"><span class="material-icons">add_task</span></td>
+                                <td class="body">Utilizei em todas as páginas para alterar a cor dos titulos(hx).</td>
+                            </tr>
+                            <tr>
+                                <td class="body" >classe</td>
+                                <td class="body"><span class="material-icons">add_task</span></td>
+                                <td class="body">Utilizei em todas as páginas.</td>
+                            </tr>
+                            <tr>
+                                <td class="body" >id</td>
+                                <td class="body"><span class="material-icons">add_task</span></td>
+                                <td class="body">Utilizei na maioria das páginas.</td>
+                            </tr>
+                            <tr>
+                                <td class="body">atributo</td>
+                                <td class="body"><span class="material-icons">add_task</span></td>
+                                <td class="body">Utilizei na maioria das páginas.</td>
+                            </tr>
+                            <tr>
+                                <td class="body">pseudo-classe</td>
+                                <td class="body"><span class="material-icons">add_task</span></td>
+                                <td class="body" >Utilizei em todas as páginas nos links.</td>
+                            </tr>
+                            <tr>
+                                <td class="body" >pseudo-elemento</td>
+                                <td class="body"><span class="material-icons">add_task</span></td>
+                                <td class="body" >Utilizei em todas as páginas para aumentar e mudar a cor da primeira letra dos parágrafos.</td>
+                            </tr>
+                        </tr>
+                      </tbody>
+                    </table>
+                </section>
+
+                  <section class="ask2">
+                    <h5>Django</h5>
+                    <p id="unico">Django é um framework para desenvolvimento rápido para web, escrito em Python, que utiliza o padrão model-template-view (MTV).</p>
+
+                    <table class="table" border="1" cellpadding="20%" cellspacing="10px" bgcolor="#232900">
+
+                     <thead>
+                        <tr>
+                        <th class="hdr">Ferramentas</th>
+                        <th class="hdr" >Utilização</th>
+                        <th class="hdr" >Descrição</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                            <tr>
+                                <td class="body" >Interface Administrativa</td>
+                                <td class="body"><span class="material-icons">add_task</span></td>
+                                <td class="body">Utilizei uma interface para administração dos modelos criados através do ORM.(/admin)</td>
+                            </tr>
+                            <tr>
+                                <td class="body">Formulários</td>
+                                <td class="body"><span class="material-icons">add_task</span></td>
+                                <td class="body">Utilizei para gerar formulários automaticamente através dos modelos de dados.(forms.py)</td>
+                            </tr>
+                            <tr>
+                                <td class="body" >Sistema de Templates</td>
+                                <td class="body"><span class="material-icons">add_task</span></td>
+                                <td class="body">Utilizei para separar design, conteúdo e código em Python.(pasta Templates, ficheiros .html)</td>
+                            </tr>
+                            <tr>
+                                <td class="body" >Urls</td>
+                                <td class="body"><span class="material-icons">add_task</span></td>
+                                <td class="body">Utilizei para defenir o caminho(path) das páginas ou sites.(urls.py)</td>
+                            </tr>
+                            <tr>
+                                <td class="body">Sistema models</td>
+                                <td class="body"><span class="material-icons">add_task</span></td>
+                                <td class="body">Utilizei para modelar os formulários.(models.py)</td>
+                            </tr>
+                            <tr>
+                                <td class="body">Sistema views</td>
+                                <td class="body"><span class="material-icons">add_task</span></td>
+                                <td class="body" >Utilizei para defenir as funções responsáveis por defenir a forma de renderizar as págias/site.(views.py)</td>
+                            </tr>
+                        </tr>
+                      </tbody>
+                    </table>
+                </section>
+
+                  <section class="ask2">
+                    <h5>JavaScript</h5>
+                    <p id="unico">JavaScript (frequentemente abreviado como JS) é uma linguagem de programação interpretada estruturada, de script em alto nível com tipagem dinâmica fraca e multiparadigma (protótipos, orientado a objeto, imperativo e, funcional).</p>
+
+                    <table class="table" border="1" cellpadding="20%" cellspacing="10px" bgcolor="#232900">
+
+                     <thead>
+                        <tr>
+                        <th class="hdr">Ferramentas</th>
+                        <th class="hdr" >Utilização</th>
+                        <th class="hdr" >Descrição</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                            <tr>
+                                <td class="body" >single-page application (SPA)</td>
+                                <td class="body"><span class="material-icons">add_task</span></td>
+                                <td class="body">Feita (singlepage.html)</td>
+                            </tr>
+                            <tr>
+                                <td class="body">Manipulações do DOM com JavaScript</td>
+                                <td class="body"><span class="material-icons">add_task</span></td>
+                                <td class="body">Utilizei para manipular dados da API e fazer alterações visuais na single-page</td>
+                            </tr>
+                            <tr>
+                                <td class="body" >API desenvolvida</td>
+                                <td class="body"><span class="material-icons">add_task</span></td>
+                                <td class="body">Utilizei registro gravado em view.py</td>
+                            </tr>
+                        </tr>
+                      </tbody>
+                    </table>
+                </section>
+
+                <section class="ask2">
+                    <h5>Ilustação da árvore do website</h5>
+                        <figure class="container">
+                            <img class="imagemMulti" src="{% static 'website/images/mapasite.jpg' %}">
+                            <figcaption><details>
+                              <summary>Árvore do website</summary>
+                              <p>Ilustração da árvore do website geral.</p>
+                            </details></figcaption></a>
+                        </figure>
+                </section>
+
+                <section class="ask2">
+                    <h5>Ilustação dos menus/sub-menus expandidos</h5>
+                        <figure class="container">
+                            <img src="{% static 'website/images/arvoreMenus.png' %}">
+                            <figcaption><details>
+                              <summary>Menus/sub-Menus</summary>
+                              <p>Ilustração dos menus/sub-menus expandidos.</p>
+                            </details></figcaption></a>
+                        </figure>
+
+                    <figure class="container">
+                            <img src="{% static 'website/images/arvoreMenus2.png' %}">
+                            <figcaption><details>
+                              <summary>Menus/sub-Menus</summary>
+                              <p>Ilustração dos menus/sub-menus expandidos.</p>
+                            </details></figcaption></a>
+                        </figure>
+
+                <section>
+                    <h5 class="ask2">Vídeo demonstrativo do funcionamento do Website:</h5>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/iA6Ji2MjoL8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  </section>
+
+        </section>
+{% endblock %}

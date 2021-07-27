@@ -1,0 +1,40 @@
+{% extends 'website/paginas/base.html' %}
+
+{% block title %}
+    <title>Futebol VIP: Jogadores</title>
+{% endblock %}
+
+{% block header %}
+    <h1>Futebol VIP: Jogadores</h1>
+{% endblock %}
+
+{% block main %}
+    <article>
+        <section class="ask">
+            <h3 class="blink">Zinédine Zidane</h3>
+        </section>
+        <section>
+            <figure>
+                {% load static %}
+                <img class="displayed" src="{% static 'website/images/zidane.jpg' %}">
+                <figcaption><details>
+                    <summary>Zinédine Zidane</summary>
+                    <p><a href="https://observador.pt/2018/05/31/zinedine-zidane-deixa-o-real-madrid/" alt="Zidane" target="_blank">Imagem de Zidane no comando técnico do Real Madrid</a></p>
+                </details></figcaption></a>
+            </figure>
+        </section>
+        <section class="esconder">
+            <fieldset class="ask" >
+                <p><a href="https://pt.wikipedia.org/wiki/Zin%C3%A9dine_Zidane" target="_blank">Zinédine Yazid Zidane</a> (Marselha, 23 de junho de 1972), mais conhecido como Zinedine Zidane, é um ex-futebolista e técnico francês de origem argelina. Atualmente comanda o Real Madrid.</p>
+                <p>Como jogador, foi um meio-campista clássico e é considerado um dos maiores de todos os tempos. Zidane é considerado o maior jogador da história do futebol francês, sendo frequentemente comparado ao seu compatriota Michel Platini. Durante sua carreira, defendeu equipes como Juventus e Real Madrid, estando presente também, na fase mais vitoriosa da história da seleção francesa, que conquistou a primeira Copa do Mundo e o segundo título da Eurocopa de sua história (a outra fora conquistada na época de Platini). De fato, personificou a subida dos Bleus, até então vistos como uma força média, para o escalão das grandes seleções, em uma mudança que chegou a ser vista como uma "Queda da Bastilha" desportiva.</p>
+            </fieldset>
+        </section>
+        <br>
+    </article>
+{% endblock %}
+
+{% block footer %}
+    <section>
+     <iframe width="560" height="315" src="https://www.youtube.com/embed/GynTajMqerA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </section>
+{% endblock footer %}

@@ -1,0 +1,23 @@
+{% extends 'website/base.html' %}
+
+{% block title %}
+    <title>Futebol VIP: Comentários</title>
+{% endblock %}
+
+{% block header %}
+    <h1>Futebol VIP: Comentários</h1>
+{% endblock %}
+
+{% block main %}
+    <section class="ask">
+        <h3 class="blink">Comentário:</h3>
+
+        <form action="" method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+
+            <input type="submit" value="Submit" class="btn btn-success" >
+        </form>
+    </section>
+    <br>
+{% endblock %}

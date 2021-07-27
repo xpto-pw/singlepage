@@ -1,0 +1,114 @@
+{% extends 'website/base.html' %}
+
+<section class="grid-container2">
+
+{% block title %}
+    <title>Futebol VIP: Homepage</title>
+{% endblock %}
+
+{% block header %}
+    <h1>Futebol VIP: Homepage</h1>
+{% endblock %}
+
+{% block nav %}
+    {% load static %}
+    <nav class="nav" id="foto">
+        <nav class="menu2">
+            <ul>
+                <li>
+                    <a id="menu"><img class="imagemMenu2" src="{% static 'website/images/equipas.png' %}">
+                        <text fill="#ffb03b" stroke="none" font-family="Paprika" font-size="47.7501px" font-style="normal" font-weight="normal" x="200px" y="200px">Equipas</text>
+                    </a>
+                    <ul class="none">
+                        <li><p class="importante"><a id="menu" href="paginas/united.html"><img class="imagemMenu" src="{% static 'website/images/united.png' %}">M.United</a></p></li>
+                        <li><p class="importante"><a id="menu" href="paginas/sporting.html"><img class="imagemMenu" src="{% static 'website/images/scp.png' %}">Sporting</a></p></li>
+                        <li><p class="importante"><a id="menu" href="paginas/madrid.html"><img class="imagemMenu" src="{% static 'website/images/madrid.png' %}">R.Madrid</a></p></li>
+                        <li><p class="importante"><a id="menu" href="paginas/juventus.html"><img class="imagemMenu" src="{% static 'website/images/juventus.jpg' %}">Juventus</a></p></li>
+                    </ul>
+                </li>
+                <li>
+                    <a id="menu"><img class="imagemMenu2" src="{% static 'website/images/pontape.png' %}">
+                        <text fill="#ffb03b" stroke="none" font-family="Paprika" font-size="47.7501px" font-style="normal" font-weight="normal" x="200px" y="200px">Jogadores</text>
+                    </a>
+                    <ul class="none">
+                        <li><p class="importante"><a id="menu" href="paginas/figo.html"><img class="imagemMenu" src="{% static 'website/images/bola2.ico' %}">L.Figo</a></p></li>
+                        <li><p class="importante"><a id="menu" href="paginas/ronaldo.html"><img class="imagemMenu" src="{% static 'website/images/bola3.ico' %}">C.Ronaldo</a></p></li>
+                        <li><p class="importante"><a id="menu" href="paginas/zidane.html"><img class="imagemMenu" src="{% static 'website/images/bola4.ico' %}">Zidane</a></p></li>
+                        <li><p class="importante"><a id="menu" href="paginas/ronaldinho.html"><img class="imagemMenu" src="{% static 'website/images/bola1.ico' %}">Ronaldinho</a></p></li>
+                    </ul>
+                </li>
+                <li>
+                    <a id="menu"><img class="imagemMenu2" src="{% static 'website/images/stadium.png' %}">
+                        <text fill="#ffb03b" stroke="none" font-family="Paprika" font-size="47.7501px" font-style="normal" font-weight="normal" x="200px" y="200px">Estádios</text>
+                    </a>
+                    <ul class="none">
+                        <li><p class="importante"><a id="menu" href="paginas/bernabeu.html"><img class="imagemMenu" src="{% static 'website/images/estadio.ico' %}">Bernabéu</a></p></li>
+                        <li><p class="importante"><a id="menu" href="paginas/alvalade.html"><img class="imagemMenu" src="{% static 'website/images/estadio.ico' %}">Alvalade</a></p></li>
+                        <li><p class="importante"><a id="menu" href="paginas/trafford.html"><img class="imagemMenu" src="{% static 'website/images/estadio.ico' %}">Old Trafford</a></p></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </nav>
+{% endblock %}
+
+{% block main %}
+    <main class="menu2">
+      <main id="foto">
+          <ul>
+              <li>
+                  <a id="menu" href="{% url 'website:index' %}"><img class="imagemMenu22" src="{% static 'website/images/home.ico' %}">
+                      <text fill="#ffb03b" stroke="none" font-family="Paprika" font-size="47.7501px" font-style="normal" font-weight="normal" x="200px" y="200px">Home</text>
+                  </a>
+              </li>
+              <li>
+                  <a id="menu" href="{% url 'website:quizz' %}"><img class="imagemMenu22" src="{% static 'website/images/quizz.ico' %}">
+                      <text fill="#ffb03b" stroke="none" font-family="Paprika" font-size="47.7501px" font-style="normal" font-weight="normal" x="200px" y="200px">Quizz</text>
+                  </a>
+              </li>
+              <li>
+                  <a id="menu" href="{% url 'website:sobre' %}"><img class="imagemMenu22" src="{% static 'website/images/info.ico' %}">
+                      <text fill="#ffb03b" stroke="none" font-family="Paprika" font-size="47.7501px" font-style="normal" font-weight="normal" x="200px" y="200px">Sobre Nós</text>
+                  </a>
+              </li>
+              <li>
+                  <a id="menu" href="{% url 'website:multimedia' %}"><img class="imagemMenu22" src="{% static 'website/images/multimedia.ico' %}">
+                      <text fill="#ffb03b" stroke="none" font-family="Paprika" font-size="47.7501px" font-style="normal" font-weight="normal" x="200px" y="200px">Multimedia</text>
+                  </a>
+              </li>
+              <li>
+                  <a id="menu" href="{% url 'website:comentarios' %}"><img class="imagemMenu22" src="{% static 'website/images/coment.png' %}">
+                      <text fill="#ffb03b" stroke="none" font-family="Paprika" font-size="47.7501px" font-style="normal" font-weight="normal" x="200px" y="200px">Comentarios</text>
+                  </a>
+              </li>
+              <li>
+                  <a id="menu" href="{% url 'website:contactosNovo' %}"><img class="imagemMenu22" src="{% static 'website/images/contact.png' %}">
+                      <text fill="#ffb03b" stroke="none" font-family="Paprika" font-size="47.7501px" font-style="normal" font-weight="normal" x="200px" y="200px">Adicionar Contacto</text>
+                  </a>
+              </li>
+              <li>
+                  <a id="menu" href="{% url 'website:jogadorNovo' %}"><img class="imagemMenu22" src="{% static 'website/images/novoJ.png' %}">
+                      <text fill="#ffb03b" stroke="none" font-family="Paprika" font-size="47.7501px" font-style="normal" font-weight="normal" x="200px" y="200px">Adicionar Jogador</text>
+                  </a>
+              </li>
+              <li>
+                  <a id="menu" href="{% url 'singlepage:index' %}"><img class="imagemMenu22" src="{% static 'website/images/java.png' %}">
+                      <text fill="#ffb03b" stroke="none" font-family="Paprika" font-size="47.7501px" font-style="normal" font-weight="normal" x="200px" y="200px">Singlepage</text>
+                  </a>
+              </li>
+          </ul>
+      </main>
+    </main>
+
+    <figure >
+        <img src="{% static 'website/images/vip.jpg' %}" class="animacao">
+        <figcaption><details>
+            <summary>Futebol VIP</summary>
+            <p><a href="https://www.facebook.com/pg/Futebol-Vip-1083139578397174/posts/" target="_blank">Imagem representativa da página web</a></p>
+        </details></figcaption></a>
+    </figure>
+
+{% endblock %}
+
+</section>
+

@@ -1,0 +1,40 @@
+{% extends 'website/paginas/base.html' %}
+
+{% block title %}
+    <title>Futebol VIP: Jogadores</title>
+{% endblock %}
+
+{% block header %}
+    <h1>Futebol VIP: Jogadores</h1>
+{% endblock %}
+
+{% block main %}
+    <article>
+        <section class="ask">
+            <h3 class="blink">Ronaldinho Gaucho</h3>
+        </section>
+        <section>
+            <figure>
+                {% load static %}
+                <img class="displayed" src="{% static 'website/images/ronaldinho.jpg' %}">
+                <figcaption><details>
+                    <summary>Ronaldinho Gaucho</summary>
+                    <p><a href="https://www.goal.com/br/not%C3%ADcias/todos-falamos-de-messi-e-cr7-mas-ronaldinho-era-especial-diz/1dketfff1xen51eza1567oevyz" alt="Ronaldinho" target="_blank">Imagem de Ronaldinho em campo pela equipa do Barcelona</a></p>
+                </details></figcaption></a>
+            </figure>
+        </section>
+        <section class="esconder">
+            <fieldset class="ask" >
+                <p><a href="https://pt.wikipedia.org/wiki/Ronaldinho_Ga%C3%BAcho" target="_blank">Ronaldo de Assis Moreira</a>, mais conhecido como Ronaldinho Gaúcho ou simplesmente Ronaldinho (Porto Alegre, 21 de março de 1980), é um ex-futebolista brasileiro que atuava como meia-atacante. Atualmente é embaixador do Barcelona, clube em que fez história.</p>
+                <p>Venceu o prêmio Melhor Jogador do Mundo pela FIFA em 2004 e 2005, época em que viveu o grande auge de sua carreira. Foi o primeiro (e ainda é o único) futebolista na história a ter conquistado Liga dos Campeões da UEFA, a Libertadores, a Copa do Mundo e a também ter sido eleito o Melhor do Mundo.</p>
+            </fieldset>
+        </section>
+        <br>
+    </article>
+{% endblock %}
+
+{% block footer %}
+    <section>
+     <iframe width="560" height="315" src="https://www.youtube.com/embed/_dBz4dTZocg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </section>
+{% endblock footer %}

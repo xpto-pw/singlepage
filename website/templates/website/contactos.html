@@ -1,0 +1,20 @@
+{% extends 'website/base.html' %}
+
+{% block title %}
+    <title>Futebol VIP: Contactos</title>
+{% endblock %}
+
+{% block header %}
+    <h1>Futebol VIP: Lista Contactos(Admin)</h1>
+{% endblock %}
+
+{% block main %}
+    <h3>Contactos</h3>
+
+    {% for contacto in contactos %}
+    <p>{{ contacto.nome }}:{{ contacto.apelido }}</p>
+        <a href="{% url 'website:contactosEdita' contacto.id %}" class="btn btn-warning">Editar</a>
+    {% endfor %}
+    <a href="{% url 'website:contactosNovo' %}" class="btn btn-sucess">+ Novo Contacto</a>
+
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends 'website/paginas/base.html' %}
+
+{% block title %}
+    <title>Futebol VIP: Estádios</title>
+{% endblock %}
+
+{% block header %}
+    <h1>Futebol VIP: Estádios</h1>
+{% endblock %}
+
+{% block main %}
+         <article>
+             <section class="ask">
+                 <h3 class="blink">Old Trafford</h3>
+             </section>
+             <section>
+                 <figure>
+                     {% load static %}
+                     <img class="displayed" src="{% static 'website/images/trafford.jpg' %}">
+                     <figcaption><details>
+                         <summary>Old Trafford</summary>
+                         <p><a href="https://www.gettyimages.pt/fotos/old-trafford?family=editorial&phrase=old%20trafford&sort=mostpopular" alt="trafford" target="_blank">Imagem do estádio Old Trafford</a></p>
+                     </details></figcaption></a>
+                 </figure>
+             </section>
+             <section class="esconder">
+                 <fieldset class="ask" >
+                     <p>O <a href="https://pt.wikipedia.org/wiki/Old_Trafford" target="_blank">Old Trafford</a> é um estádio de futebol, localizado no distrito de Trafford, condado da Grande Manchester, Inglaterra. É a sede do Manchester United, clube da Premier League inglesa. Com espaço para 76 212 espectadores, o Old Trafford é o segundo maior estádio da Inglaterra em termos de capacidade, atrás somente do Estádio Wembley, o terceiro maior no Reino Unido, e o décimo primeiro na Europa. O estádio é localizado a cerca de 800 metros (meia milha) do Old Trafford Cricket Ground.</p>
+                 </fieldset>
+             </section>
+             <br>
+         </article>
+{% endblock %}
+
+{% block footer %}
+    <section>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/6EJWUDogXF4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </section>
+{% endblock footer %}

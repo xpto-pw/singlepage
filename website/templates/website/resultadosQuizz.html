@@ -1,0 +1,20 @@
+{% extends 'website/base.html' %}
+
+{% block title %}
+    <title>Futebol VIP: Quizz</title>
+{% endblock %}
+
+{% block header %}
+    <h1>Futebol VIP: Resultados Quizz</h1>
+{% endblock %}
+
+{% block main %}
+    <section class="ask">
+        <h3 class="blink">Resultados Quizz</h3>
+        <section class="quizz">
+        {% for ponto in pontos %}
+                <p>{{ ponto }}</p>
+        {% endfor %}
+        </section>
+    </section>
+{% endblock %}
